@@ -1,28 +1,190 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Bin Blasters</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;background:#f5f5f5;color:#222}
-header{background:#1f7a3a;color:#fff;padding:40px;text-align:center}
-section{max-width:1000px;margin:20px auto;background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.cards{display:flex;gap:16px;flex-wrap:wrap}
-.card{flex:1;min-width:220px;border:1px solid #ddd;border-radius:10px;padding:16px}
-iframe{width:100%;height:1600px;border:0;border-radius:10px}
-footer{text-align:center;padding:20px}
-</style></head><body>
-<header><h1>🗑️ Bin Blasters</h1><p>Professional Trash Bin Cleaning</p></header>
-<section><h2>Pricing</h2><div class='cards'>
-<div class='card'><h3>1 Bin</h3><h1>$15</h1></div>
-<div class='card'><h3>2 Bins</h3><h1>$30</h1></div>
-<div class='card'><h3>Monthly</h3><h1>$25/mo</h1><p>Up to 2 bins. Every 3 cleanings, your 4th is FREE!</p></div>
-</div></section>
-<section><h2>Service Areas</h2><p>Hillsboro & Cornelius, Oregon</p></section>
-<section><h2>How We Clean</h2><ol><li>Rinse</li><li>Apply cleaning solution</li><li>Rinse</li><li>Soap</li><li>Final rinse</li><li>Deodorize</li><li>Dry</li></ol></section>
-<section><h2>Water & Electricity</h2><p>We ask permission to use your outdoor water connection and a standard electrical outlet. We use only a small amount of water and electricity while still providing a thorough, high-quality cleaning.</p></section>
-<section><h2>Frequently Asked Questions</h2>
-<p><b>Do I need to be home?</b><br>No. Just leave your bins at the curb.</p>
-<p><b>How do I join the loyalty program?</b><br>Select the monthly subscription or email binblaster.clean@gmail.com.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bin Blasters | Trash Bin Cleaning</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+
+<header>
+  <h1>🧼 Bin Blasters</h1>
+  <p class="tagline">Clean bins. No mess. No hassle.</p>
+</header>
+
+<section class="pricing">
+  <h2>💲 Pricing</h2>
+
+  <div class="card">
+    <h3>One-Time Cleaning</h3>
+    <p><strong>$15</strong> — 1 Bin</p>
+    <p><strong>$30</strong> — 2 Bins</p>
+  </div>
+
+  <div class="card highlight">
+    <h3>⭐ Loyalty Program</h3>
+    <p><strong>$25/month</strong></p>
+    <ul>
+      <li>Monthly cleanings</li>
+      <li>Priority booking</li>
+      <li>Every 3rd cleaning FREE</li>
+    </ul>
+  </div>
 </section>
-<section><h2>Schedule Your Cleaning</h2>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU7iyD_QRtDM--tkZVkyTbi9bFpIGGX7XH8GV6gYBD23uNzA/viewform?embedded=true">Loading…</iframe>
+
+<section class="info">
+  <h2>⚠️ Service Requirements</h2>
+  <ul>
+    <li>💧 Outdoor water access REQUIRED</li>
+    <li>⚡ Outdoor electricity outlet REQUIRED</li>
+    <li>🗑️ Bins must be at curbside</li>
+    <li>We do NOT enter homes</li>
+  </ul>
 </section>
-<footer>© 2026 Bin Blasters</footer></body></html>
+
+<section class="how">
+  <h2>🧼 How It Works</h2>
+  <ol>
+    <li>Bins placed at curb</li>
+    <li>Connect water + power</li>
+    <li>Rinse + scrub + disinfect</li>
+    <li>Deodorize + dry</li>
+  </ol>
+</section>
+
+<section class="booking">
+  <h2>📩 Book a Cleaning</h2>
+
+  <form action="https://formspree.io/f/mwvdrdaw>
+
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="text" name="contact" placeholder="Phone or Email" required>
+
+    <input type="text" name="address" placeholder="Full Address" required>
+    <input type="text" name="city" placeholder="City" required>
+
+    <select name="bins" required>
+      <option value="">Number of Bins</option>
+      <option value="1">1 Bin</option>
+      <option value="2">2 Bins</option>
+    </select>
+
+    <select name="service_type" required>
+      <option value="">Service Type</option>
+      <option value="one-time">One-Time</option>
+      <option value="subscription">Monthly ($25)</option>
+    </select>
+
+    <input type="date" name="date" required>
+
+    <textarea name="access_notes" placeholder="
+Dogs? Gate codes? Water spigot location? Outlet location?"></textarea>
+
+    <label>
+      <input type="checkbox" required>
+      I confirm outdoor water is available
+    </label>
+
+    <label>
+      <input type="checkbox" required>
+      I confirm outdoor electricity is available
+    </label>
+
+    <label>
+      <input type="checkbox" required>
+      Bins will be at curbside
+    </label>
+
+    <button type="submit">Schedule Cleaning</button>
+
+  </form>
+</section>
+
+<footer>
+  <p>📍 Hillsboro & Cornelius, Oregon</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.tagline {
+  opacity: 0.9;
+}
+
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #0a3d62;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.highlight {
+  border: 2px solid #0a3d62;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+.booking form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #0a3d62;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #07406b;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  margin-top: 30px;
+}
+
+// Simple enhancement (optional)
+console.log("Bin Blasters site loaded");
